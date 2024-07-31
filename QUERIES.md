@@ -17,19 +17,18 @@ db.restaurants.find({}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
 3. Display the fields restaurant_id, name, borough and cuisine, but exclude the field \_id for all the documents in the collection.:
 
 ```
-db,restuarant.find({}, {restuarnt_id: 1, name: 1, borough: 1, cuisine: 1, id: 0})
+db.restuarant.find({}, {restuarnt_id: 1, name: 1, borough: 1, cuisine: 1,_id: 0})
 ```
 
 4. Display the fields restaurant_id, name, borough and zip code, but exclude the field \_id for all the documents in the collection.:
 
 ```
-db.restuarant.find({}, {restuarant: 1, name: 1, borough: 1, zipcode: 1, id: 0})
+db.restuarant.find({}, {restuarant: 1, name: 1, borough: 1, "address.zipcode": 1, id: 0})
 ```
 
 5. Display all the restaurants which are in the borough Bronx.:
 
 ```
-
 db.restuarants.find({borough: "Bronx"})
 ```
 
@@ -60,7 +59,7 @@ db.restaurants.find({"grades.score": {$gt: 80, $lt: 100}})
 10. Find the restaurants which are located in latitude value less than -95.754168.:
 
 ```
-db.restaurants.find({"address.coord.1": {$lt: -95.754168}})
+db.restaurants.find({"address.coord.0": {$lt: -95.754168}})
 ```
 
 11. Find the restaurants that do not prepare any cuisine of 'American' and their grade score is more than 70 and latitude less than -65.754168.:

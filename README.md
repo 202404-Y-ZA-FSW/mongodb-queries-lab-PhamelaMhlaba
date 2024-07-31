@@ -14,13 +14,13 @@ With Docker, setting up your local database becomes straightforward and ensures 
 1. **Start MongoDB Container**: First, start the MongoDB container by running:
 
    ```
-   npm run start
+   npm run start ##DONE
    ```
 
 2. **Verify Container Running**: To ensure that the MongoDB container is running correctly and to check your container name, use the following command:
 
    ```
-   npm run verify
+   npm run verify ##DONE
    ```
 
 3. **Copy Restaurant Data to Container**: Now, copy the `restaurants.json` data file to your running MongoDB container. Replace `<path to your restaurant.json file>` with the actual path to your `restaurants.json` file, and `your_container_name` with the name of your MongoDB container:
